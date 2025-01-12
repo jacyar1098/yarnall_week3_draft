@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PWA Research - Introduction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Introduction</a></li>
+      <li><a href="pwa.html">About PWAs</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Progressive Web Applications: Bridging the Gap</h1>
+  </header>
+
+  <section class="intro-section">
+    <p>
+      In an increasingly mobile-driven world, users often encounter challenges when using both traditional web applications and native mobile applications. Common troubles include slow loading times, frequent software updates, large storage requirements, and performance constraints across different devices (BigCommerce Team, 2024). These obstacles can lead to user frustration and missed opportunities for businesses. As a solution, <strong>Progressive Web Applications (PWAs)</strong> have emerged to offer a seamless user experience that blends the best of websites and native apps.
+    </p>
+    <p>
+      My research explores the current issues faced by both users and developers in adopting traditional web and native mobile apps. We also highlight how PWAs can mitigate these issues. The following findings are based on scholarly research, professional insights, and a small pilot survey conducted to gauge user perspectives on application usage.
+    </p>
+  </section>
+
+  <section class="survey-results">
+    <h2>Survey Results Overview</h2>
+    <p>
+      I surveyed five anonymous participants about how they primarily access their favorite applications, the challenges they face, factors influencing app or website choice, desired features, and preferred storage limits. <strong>All five participants</strong> indicated they use a <em>mix of both mobile apps and web browsers</em>, underscoring the demand for flexible, cross-platform access.
+    </p>
+    <p>
+      The most frequently cited challenges included frequent updates, battery drain issues, and slow loading times. Some participants also mentioned high data usage or performance concerns. These issues reveal why a more universally optimized approach like PWAs could be beneficial.
+    </p>
+
+    <!-- Load Chart.js Library First -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Container for the canvas -->
+    <div class="chart-container">
+      <canvas id="challengesChart"></canvas>
+    </div>
+
+    <script>
+      // Simple chart displaying how many times each challenge was mentioned, based on survey data
+      // from the attached Excel spreadsheet
+      // Frequent updates required (3), Battery drain issues (3), Slow loading times (2), Poor performance device (1), High data usage (1)
+      const ctx = document.getElementById('challengesChart').getContext('2d');
+      const data = {
+        labels: [
+          'Frequent Updates',
+          'Battery Drain',
+          'Slow Loading',
+          'Poor Performance',
+          'High Data Usage'
+        ],
+        datasets: [{
+          label: 'Number of Mentions',
+          data: [3, 3, 2, 1, 1],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)',
+            'rgba(75, 192, 192, 0.7)',
+            'rgba(153, 102, 255, 0.7)'
+          ],
+          borderWidth: 1
+        }]
+      };
+
+      const config = {
+        type: 'bar',
+        data: data,
+        options: {
+          indexAxis: 'y',
+          scales: {
+            x: {
+              beginAtZero: true
+            }
+          },
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      };
+      new Chart(ctx, config);
+    </script>
+
+    <p>
+      As shown in the chart, <em>Frequent Updates Required</em> and <em>Battery Drain Issues</em> were each mentioned by three participants, and <em>Slow Loading Times</em> was cited by two. The sentiment that emerged from this pilot survey reflects a general frustration with the overhead of maintaining native apps.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Research Team</p>
+  </footer>
+</body>
+</html>

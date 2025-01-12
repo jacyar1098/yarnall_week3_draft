@@ -1,0 +1,106 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+  }
+  
+  nav {
+    background-color: #004d79;
+    padding: 1em;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 1em;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  header {
+    padding: 2em;
+    text-align: center;
+    background: #006699;
+    color: white;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.2em;
+  }
+  
+  .intro-section,
+  .survey-results,
+  .pwa-definition,
+  .pwa-benefits,
+  .pwa-conclusion,
+  .references-list {
+    max-width: 800px;
+    margin: 2em auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 6px;
+  }
+  
+  .intro-section p,
+  .survey-results p,
+  .pwa-definition p,
+  .pwa-benefits p,
+  .pwa-conclusion p {
+    line-height: 1.6em;
+    margin-bottom: 1em;
+  }
+  
+  .banner-image {
+    width: 100%;
+    display: block;
+    margin-bottom: 1em;
+    border-radius: 6px;
+  }
+  
+  .survey-results .chart-container {
+    margin: 2em 0;
+  }
+  
+  .pwa-benefits ol {
+    margin-left: 1.5em;
+    line-height: 1.6em;
+  }
+  
+  .footer {
+    text-align: center;
+    margin: 1em 0;
+  }
+  
+  footer {
+    text-align: center;
+    color: #666;
+    padding: 1em 0;
+    margin-top: 2em;
+  }
+  
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+    nav ul li {
+      margin: 1em 0;
+    }
+  }
+  
